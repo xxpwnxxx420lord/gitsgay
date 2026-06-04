@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="file" webkitdirectory multiple>
+
+    <script>
+        document.querySelector("input").addEventListener("change", e => {
+            for (const file of e.target.files) {
+                document.body.innerHTML += file.webkitRelativePath + "<br>";
+            }
+        });
+    </script>
+</body>
+</html>
